@@ -34,6 +34,8 @@ body {
 }
 
 nav {
+  z-index: 10;
+  background-color: white;
   position: fixed;
   top: 0;
   left: 0;
@@ -46,6 +48,7 @@ nav {
 
 .hero-container {
   width: 100vw;
+  z-index: 0;
 }
 
 .hero-image {
@@ -74,4 +77,37 @@ nav {
   margin: 0;
   width: 300px;
   line-height: 1.1;
+}
+
+.card-container {
+  margin: 50px 0 20px 30px;
+  z-index: 0;
+}
+
+.swimmer-image {
+  width: 175px;
+  height: 235px;
+}
+
+.star-image {
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+}
+
+.card-rating {
+  display: flex;
+  align-items: center;
+}
+
+p {
+  margin: 0;
+}
+
+.gray-text {
+  color: #918E9B;
+}
+
+.card-rating, .card-title, .card-pricing {
+  font-size: 13px;
 }
