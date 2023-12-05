@@ -1,23 +1,32 @@
-import swimmerImage from '../images/image12.png'
 import starImage from '../images/Star1.png'
 
-export default function Card() {
+export default function Card(props) {
+
+  let badgeText;
+
+  if (props.openSpots === 0) {
+    badgeText = "SOLD OUT";
+  } else if (props.location === "Online") {
+    badgeText = "ONLINE";
+  }
+
   return (
     <div className="card-container">
-      <img src={swimmerImage} className="swimmer-image" />
+      {badgeText && <div className="card-badge">{badgeText}</div>}
+      <img src={props.coverImg} className="swimmer-image" />
       <div className="card-info">
         <div className="card-rating">
           <img src={starImage} className="star-image" />
-          <p>5.0&thinsp;</p>
-          <p className="gray-text">(6)&thinsp;</p>
+          <p>{props.rating}&thinsp;</p>
+          <p className="gray-text">({props.reviewCount})&thinsp;</p>
           <p className="gray-text">&bull;&thinsp;</p>
-          <p className="gray-text">USA</p>
+          <p className="gray-text">{props.location}</p>
         </div>
         <div className="card-title">
-          <p>Life lessons with Katie Zaferes</p>
+          <p>{props.title}</p>
         </div>
         <div className="card-pricing">
-          <p><strong>From $136 </strong>/ person</p>
+          <p><strong>From ${props.price} </strong>/ person</p>
         </div>
       </div>
     </div>
