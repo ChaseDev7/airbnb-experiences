@@ -1,4 +1,4 @@
-import groupImage from '../images/Group77.png'
+import groupImage from '../../public/images/Group77.png'
 
 export default function Hero() {
   return (

@@ -1,4 +1,4 @@
-import airbnbLogo from '../images/airbnb1.jpg'
+import airbnbLogo from '../../public/images/airbnb1.jpg'
 
 export default function Navbar() {
   return (
